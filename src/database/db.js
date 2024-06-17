@@ -10,7 +10,6 @@ const connetcDatabase = () => {
         console.error('COULD NOT CONNECT TO DATABASE:', error.message);
     }
 
-
 }
 
 module.exports = connetcDatabase;
