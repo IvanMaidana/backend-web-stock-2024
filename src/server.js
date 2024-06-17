@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 
-app.get('/teste', (request, response) => {
+app.get('/', (request, response) => {
     return response.send({message: "correct teste"});
 })
 
