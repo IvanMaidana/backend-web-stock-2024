@@ -1,4 +1,5 @@
 const { Router } = require("express");
+require("dotenv").config();
 
 const usersRouter = require("./users.routes");
 const stockRouter = require("./stock.routes");
