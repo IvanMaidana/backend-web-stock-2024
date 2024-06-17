@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const connetcDatabase = () => {
-    console.log("wait connect to the database");
+const connetcDatabase = async () => {
 
-    mongoose.connect(
-        process.env.MONGODB_URL,
-        { useNewUrlParser: true, useUnifiedTopology: true }
-    )
-        .then(() => console.log("MongoDB Atlas connected"))
-        .catch((error) => console.log(error));
+    try {
+        await mongoose.connect(process.env.MONGODB_URL, {});
+        console.log("CONNECTED TO DATABASE SUCCESSFULLY");
+    } catch (error) {
+        console.error('COULD NOT CONNECT TO DATABASE:', error.message);
+    }
+
 
 }
 
