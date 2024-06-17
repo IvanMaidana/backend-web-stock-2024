@@ -10,6 +10,7 @@ app.use(express.json());
 
 
 app.get('/', (request, response) => {
+    console.log("entra na rota padrao");
     return response.send({message: "correct teste"});
 })
 
